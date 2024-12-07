@@ -1,4 +1,4 @@
-/* Global Styles */
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -9,10 +9,10 @@ body {
     line-height: 1.6;
 }
 
-/* Adding texture to sections */
+
 section {
-    background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png'); /* Subtle texture */
-    background-color: rgba(255, 255, 255, 0.8);  /* Semi-transparent background for content */
+    background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png'); 
+    background-color: rgba(255, 255, 255, 0.8);  
     padding: 50px;
     border-radius: 8px;
     margin-bottom: 30px;
