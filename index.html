@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Glenn Santiago Portfolio</title>
+    <link rel="stylesheet" href="mark portfolio.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h1>About Me</h1>
+            <div class="about-container">
+                <img src="Photos/me.WEBP" class="profile-image" alt="Mark Glenn Santiago">
+                <div class="about-text">
+                    <h2>Mark Glenn Santiago</h2>
+                    <p>
+                        I am a 3rd-year Bachelor of Science in Information Technology student at Philippine Christian University. My academic journey is focused on developing both my technical and creative skills, with a keen interest in web development and interface design.
+                    </p>
+                    <p>
+                        I specialize in creating user-centered designs and have hands-on experience with tools like Figma, Adobe XD, and Wix for design and prototyping. I’m passionate about solving real-world problems through web technologies and always looking to improve my skills in front-end development.
+                    </p>
+                    <p>
+                        My goal is to work in a dynamic, growth-oriented environment where I can further enhance my skills and contribute to projects that help businesses achieve their goals through well-designed digital experiences.
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-gallery">
+                <div class="project">
+                    <img src="photos/User.png" class="gallery-item" alt="Project 1">
+                    <p>User Information.</p>
+                </div>
+                <div class="project">
+                    <img src="photos/M&J.png" class="gallery-item" alt="Project 2">
+                    <p>M & J Restaurant Wix Design.</p>
+                </div>
+                <div class="project">
+                    <img src="photos/TechGear.png" class="gallery-item" alt="Project 3">
+                    <p>Tech Gear Depot Figma Design.</p>
+                </div>
+                <div class="project">
+                    <img src="photos/Student.png" class="gallery-item" alt="Project 4">
+                    <p>Student Information.</p>
+                </div>
+                  <div class="project">
+                    <img src="photos/Library.png" class="gallery-item" alt="Project 5">
+                    <p>E-Library Figma Design.</p>
+                </section>
+                </div>
+
+
+            </div>
+
+        </section>
+        <div id="image-modal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modal-image">
+        </div>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:mgpsantiago@pcu.edu.ph">mgpsantiago@pcu.edu.ph</a></p>
+            <p>Facebook: Mark Santiago</p>
+            <p>Phone number: 09391695962</p>
+            <p></p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Mark Glenn Santiago. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+<script>
+    const images = document.querySelectorAll(".gallery-item");
+    const modal = document.getElementById("image-modal");
+    const modalImage = document.getElementById("modal-image");
+    const closeModal = document.querySelector(".close");
+    let currentImageIndex = 0;
+
+    images.forEach((img, index) => {
+        img.addEventListener("click", () => {
+            modal.style.display = "block";
+            modalImage.src = img.src;
+            currentImageIndex = index;
+        });
+    });
+
+
+    closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+
+    nextBtn.addEventListener("click", () => {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        modalImage.src = images[currentImageIndex].src;
+    });
+
+
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+</script>
