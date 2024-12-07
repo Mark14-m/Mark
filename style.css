@@ -3,9 +3,9 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom right, #ff6a00, #e9c5c5); /* Gradient from orange to light pink */
-    background-attachment: fixed;  /* Creates a subtle parallax effect */
-    background-size: cover;       /* Ensures the gradient covers the entire screen */
+    background: linear-gradient(to bottom right, #ff6a00, #e9c5c5);
+    background-attachment: fixed; 
+    background-size: cover; 
     line-height: 1.6;
 }
 
